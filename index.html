@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changer la couleur du fond</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
+
+    <h1 class="text-2xl font-bold mb-6">Changer la couleur du fond</h1>
+
+    <div class="flex space-x-4">
+        <button id="btn-rouge" class="px-4 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition">Rouge</button>
+        <button id="btn-vert" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition">Vert</button>
+        <button id="btn-bleu" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition">Bleu</button>
+    </div>
+
+    <button id="reset" class="mt-6 px-4 py-2 bg-gray-500 text-white rounded-lg shadow-md hover:bg-gray-600 transition">Réinitialiser</button>
+
+    <script>
+        // Sélection des boutons
+        const btnRouge = document.getElementById("btn-rouge");
+        const btnVert = document.getElementById("btn-vert");
+        const btnBleu = document.getElementById("btn-bleu");
+        const btnReset = document.getElementById("reset");
+        const body = document.body;
+
+        // Ajout des événements click
+        btnRouge.addEventListener("click", () => body.style.backgroundColor = "red");
+        btnVert.addEventListener("click", () => body.style.backgroundColor = "green");
+        btnBleu.addEventListener("click", () => body.style.backgroundColor = "blue");
+        btnReset.addEventListener("click", () => body.style.backgroundColor = ""); // Revient à la couleur initiale
+    </script>
+
+</body>
+</html>
